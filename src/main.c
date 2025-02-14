@@ -14,8 +14,6 @@
 #define BAUD_PRESCALER (((F_CPU / (BAUD_RATE * 16UL))) - 1)
 char String[50];
 
-
-
 void watch_pause(){
 	if(PINC & (1<<PLAYPAUSE)){
 		cli();
@@ -48,21 +46,16 @@ void play_game(Song s){
 
 int main(void)
 {
-    //setup_robot();
+    setup_robot();
     UART_init(BAUD_PRESCALER);
-    // setup_screen();
-	// intro();
+    setup_screen();
+	intro();
     while(1)
     {	
-        read_orientation();
-        sprintf(String, "%d \n\r", yaw);
-        UART_putstring(String);
-        _delay_ms(10);
-		// LCD_setScreen(BG_COLOR);
-		// Song x = select_song(NUM_SONGS);
-		// get_ready(x);
-		// init_game(x);
-		// draw_board(x);
-		// play_game(x);
+		Song x = select_song(NUM_SONGS);
+		get_ready(x);
+		init_game(x);
+		draw_board(x);
+		play_game(x);
 	}
 }

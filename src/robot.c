@@ -1,10 +1,3 @@
-/**
- * \file
- *
- * \brief Empty user application template
- *
- */
-
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include "ServoControl.h"

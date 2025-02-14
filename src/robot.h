@@ -1,10 +1,3 @@
-/**
- * \file
- *
- * \brief Empty user application template
- *
- */
-
 #include "stdint.h"
 
 volatile uint16_t servo1_reg; 

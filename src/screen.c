@@ -1,10 +1,3 @@
-/*
- * main.c
- *
- * Created: 11/16/2023 12:14:09 PM
- *  Author: henry
- */ 
-
 #include <avr/io.h>
 #include <stdio.h>
 #include <string.h>
